@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Simple messaging with PostgreSQL",
   "main": "index.js",
+  "files": ["index.js", "sql.js"],
   "scripts": {
     "test": "ava"
   },
