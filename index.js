@@ -33,5 +33,5 @@ module.exports = (opts) => new Promise((resolve, reject) => {
     ears.listen(channel, newCb)
   }
   let methods = {listen, notify: ears.notify}
-  runQuery(pool, sql.createTbl).then(() => resolve(methods)).catch(reject)
+  runQuery(pool, sql.setup).then(() => resolve(methods)).catch(reject)
 })
