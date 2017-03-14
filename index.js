@@ -31,8 +31,10 @@ module.exports = (opts) => new Promise((resolve, reject) => {
   let listen = (channel, cb) => {
     channels[channel] = true
     let newCb = (err, payload) => {
+      payload = JSON.parse(payload)
       // delete message from _pgmq
-      cb(err, JSON.parse(JSON.parse(payload).data))
+      cb(err, JSON.parse(payload.data))
+      return runQuery(pool, sql.delete, [payload.id])
     }
     ears.listen(channel, newCb)
   }
