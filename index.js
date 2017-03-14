@@ -25,13 +25,14 @@ module.exports = (opts) => new Promise((resolve, reject) => {
   let ears = pgEars(opts)
   let channels = {}
   let notify = (channel, data) => new Promise((resolve, reject) => {
+    data = JSON.stringify(data)
     runQuery(pool, sql.notify, [channel, data]).then(resolve).catch(reject)
   })
   let listen = (channel, cb) => {
     channels[channel] = true
-    let newCb = (err, data) => {
+    let newCb = (err, payload) => {
       // delete message from _pgmq
-      cb(err, data)
+      cb(err, JSON.parse(JSON.parse(payload).data))
     }
     ears.listen(channel, newCb)
   }

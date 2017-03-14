@@ -35,5 +35,6 @@ module.exports = {
     END $$
     LANGUAGE plpgsql VOLATILE;
   `,
-  notify: `SELECT pgmq_notify($1::text, $2::text);`
+  notify: `SELECT pgmq_notify($1::text, $2::text);`,
+  delete: `DELETE FROM _pgmq WHERE id = ANY($1);`
 }
