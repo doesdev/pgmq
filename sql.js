@@ -34,5 +34,6 @@ module.exports = {
       )::text);
     END $$
     LANGUAGE plpgsql VOLATILE;
-  `
+  `,
+  notify: `SELECT pgmq_notify($1::text, $2::text);`
 }

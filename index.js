@@ -24,6 +24,9 @@ module.exports = (opts) => new Promise((resolve, reject) => {
   let pool = new Pg(opts)
   let ears = pgEars(opts)
   let channels = {}
+  let notify = (channel, data) => new Promise((resolve, reject) => {
+    runQuery(pool, sql.notify, [channel, data]).then(resolve).catch(reject)
+  })
   let listen = (channel, cb) => {
     channels[channel] = true
     let newCb = (err, data) => {
@@ -32,6 +35,6 @@ module.exports = (opts) => new Promise((resolve, reject) => {
     }
     ears.listen(channel, newCb)
   }
-  let methods = {listen, notify: ears.notify}
+  let methods = {listen, notify}
   runQuery(pool, sql.setup).then(() => resolve(methods)).catch(reject)
 })
