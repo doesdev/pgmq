@@ -1,4 +1,4 @@
-# pgmq [![NPM version](https://badge.fury.io/js/pgmq.svg)](https://npmjs.org/package/pgmq)   [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
+# pgmq [![NPM version](https://badge.fury.io/js/pgmq.svg)](https://npmjs.org/package/pgmq)   [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)   [![Dependency Status](https://dependencyci.com/github/doesdev/pgmq/badge)](https://dependencyci.com/github/doesdev/pgmq)
 
 > Simple messaging with PostgreSQL
 
