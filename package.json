@@ -1,11 +1,14 @@
 {
   "name": "pgmq",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Simple messaging with PostgreSQL",
   "main": "index.js",
-  "files": ["index.js", "sql.js"],
+  "files": [
+    "index.js",
+    "sql.js"
+  ],
   "scripts": {
-    "test": "ava"
+    "test": "ava --verbose"
   },
   "repository": {
     "type": "git",
@@ -25,9 +28,10 @@
   },
   "homepage": "https://github.com/doesdev/pgmq#readme",
   "devDependencies": {
-    "ava": "^0.18.2"
+    "ava": "^0.21.0"
   },
   "dependencies": {
-    "pg-ears": "^0.9.2"
+    "pg": "^7.1.0",
+    "pg-ears": "^1.0.0"
   }
 }
