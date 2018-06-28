@@ -1,6 +1,6 @@
 {
   "name": "pgmq",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Simple messaging with PostgreSQL",
   "main": "index.js",
   "files": [
@@ -28,10 +28,10 @@
   },
   "homepage": "https://github.com/doesdev/pgmq#readme",
   "devDependencies": {
-    "ava": "^0.21.0"
+    "ava": "^0.25.0"
   },
   "dependencies": {
-    "pg": "^7.1.0",
-    "pg-ears": "^1.0.0"
+    "pg": "^7.4.3",
+    "pg-ears": "^1.1.0"
   }
 }
