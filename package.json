@@ -1,6 +1,6 @@
 {
   "name": "pgmq",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Simple messaging with PostgreSQL",
   "main": "index.js",
   "files": [
