@@ -4,6 +4,14 @@
 
 # This is a non-functional work in progress. Don't use it yet. Thanks ;)
 
+Also running this will quite litrally create tables in your taterbase and other
+such nonsense. If you're gonna use it, read the code and make sure you're cool
+with all that's going on (it's not much).
+
+Honestly I don't even use this. In theory it should function, but it's not
+really PGs job to be a message queue system. Certainly this isn't enough to
+make it such. There are better tools for the job.
+
 ## install
 
 ```sh

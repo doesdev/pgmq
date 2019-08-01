@@ -1,6 +1,5 @@
 'use strict'
 
-// setup
 const pgmqCols = `(id bigserial PRIMARY KEY, channel text, payload text)`
 
 module.exports = {
